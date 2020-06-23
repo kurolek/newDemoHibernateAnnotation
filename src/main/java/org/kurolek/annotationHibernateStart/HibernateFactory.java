@@ -17,6 +17,9 @@ public class HibernateFactory {
         cfg.setProperty("show_sql", "true");
         cfg.setProperty("hibernate.hbm2ddl.auto", "create");
         cfg.addAnnotatedClass(org.kurolek.annotationHibernateStart.entity.Weapon.class);
+        cfg.addAnnotatedClass(org.kurolek.annotationHibernateStart.entity.WeaponType.class);
+        cfg.addAnnotatedClass(org.kurolek.annotationHibernateStart.entity.Warrior.class);
+        cfg.addAnnotatedClass(org.kurolek.annotationHibernateStart.entity.WeaponDetails.class);
         sessionFactory = cfg.buildSessionFactory();
     }
 
